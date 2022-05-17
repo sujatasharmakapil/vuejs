@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>My first Vue app</title>  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+</head>  
+<body>  
+  <div id="app">  
+  <button @click="test">click</button>
+  {{name}}
+  <span v-for="item in items">
+    {{item}}
+  </span>
+  </div>  
+  <script>  
+    var app = new Vue({  
+      el: '#app',  
+      data: {  
+        message: 'Vue.js second example with CDN',
+        name: 'i am sujata',
+        items:['a','b','c'] 
+      },
+      mounted() {
+        console.log('fds');
+      },
+      methods:{
+        test(){
+          console.log('hyy');
+          this.name='ss';
+        }
+      }
+    })  
+  </script>  
+</body>  
+</html>  

@@ -1,0 +1,43 @@
+<html>  
+<head>  
+  <title>My first Vue app</title>  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+</head>  
+<body>  
+  <div id="app">  
+    {{ message }}  
+      {{name}}
+    <button @click="test" class="test"> Click here</button>
+
+    <div v-for="item in items">
+      {{item}}
+    </div>
+  </div>  
+  <script>  
+    var app = new Vue({  
+      el: '#app',  
+      data: {  
+        message: ''  ,
+        name:'jkhfjfsjs',
+        items:['a','b','c']
+      },
+      mounted(){
+        // console.log('test');
+        // this.test();
+      },
+      methods:{
+        test(){
+          console.log('click');
+          this.name = 'abc';
+          console.log(this.name);
+        }
+      }
+    })  
+  </script>
+  <style scoped>
+    .test{
+        background: #ddd;
+    }
+  </style>
+</body>  
+</html> 
